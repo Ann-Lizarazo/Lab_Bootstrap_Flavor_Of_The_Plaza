@@ -17,3 +17,263 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+
+/*
+============================================================
+Ejercicio 08 · La identidad visual de Sabores de la Plaza
+============================================================
+El cliente pidió "nuestros propios colores, no el azul de todos
+los sitios" y "una letra que se sienta cálida".
+Escribe tu CSS DEBAJO de este comentario.
+
+  - En :root, cambia --bs-primary y --bs-primary-rgb por tu color
+    principal (el mismo color: uno en hexadecimal y otro en números).
+  - En :root, cambia --bs-body-font-family por la fuente que traes
+    de Google Fonts (el mismo nombre que va en el <link>).
+  - Una regla para .btn-primary que cambie --bs-btn-bg (y si
+    quieres, --bs-btn-border-color y --bs-btn-hover-bg).
+
+Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
+La paleta es tuya: colores cálidos de plaza de mercado.
+============================================================
+*/
+
+/* Paleta: vino mora (principal), rosa polvo (superficies), tinta de café (texto) */
+/*
+============================================================
+Ejercicio 08 · La identidad visual de Sabores de la Plaza
+============================================================
+El cliente pidió "nuestros propios colores, no el azul de todos
+los sitios" y "una letra que se sienta cálida".
+Escribe tu CSS DEBAJO de este comentario.
+
+  - En :root, cambia --bs-primary y --bs-primary-rgb por tu color
+    principal (el mismo color: uno en hexadecimal y otro en números).
+  - En :root, cambia --bs-body-font-family por la fuente que traes
+    de Google Fonts (el mismo nombre que va en el <link>).
+  - Una regla para .btn-primary que cambie --bs-btn-bg (y si
+    quieres, --bs-btn-border-color y --bs-btn-hover-bg).
+
+Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
+La paleta es tuya: colores cálidos de plaza de mercado.
+============================================================
+*/
+
+/* Paleta: vino mora (principal), rosa polvo (superficies), tinta de café (texto) */
+:root {
+  --bs-primary: #8a2342;
+  --bs-primary-rgb: 138, 35, 66;
+  --bs-body-font-family: "Hanken Grotesk", "Fraunces", system-ui, sans-serif;
+  --bs-body-bg: #fbf7f4;
+  --bs-body-color: #2b1a1e;
+  --bs-body-font-weight: 500;
+  --bs-link-color: #8a2342;
+  --bs-link-color-rgb: 138, 35, 66;
+  --bs-link-hover-color: #6d1a34;
+  --bs-link-hover-color-rgb: 109, 26, 52;
+  --fuente-titulos: "Fraunces", Georgia, serif;
+  --plaza-acento: #e0a63a;
+  --plaza-tinta: #2b1a1e;
+  --plaza-linea: #e8dcd6;
+  --plaza-suave: #f3e8e4;
+}
+ 
+.btn-primary {
+  --bs-btn-bg: #8a2342;
+  --bs-btn-border-color: #8a2342;
+  --bs-btn-hover-bg: #6d1a34;
+  --bs-btn-hover-border-color: #6d1a34;
+  --bs-btn-active-bg: #5a152b;
+  --bs-btn-active-border-color: #5a152b;
+  --bs-btn-disabled-bg: #8a2342;
+  --bs-btn-disabled-border-color: #8a2342;
+}
+ 
+/* Títulos en serif de alto contraste; el cuerpo en sans limpia */
+h1, h2, h3, .h1, .h2, .h3, .h4, .h5, .navbar-brand, .modal-title {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+h2 { font-size: 2rem; }
+h3, .h4 { font-size: 1.5rem; }
+.h5 { font-size: 1.35rem; }
+ 
+/* Barra de navegación sobria */
+.navbar {
+  border-bottom: 1px solid var(--plaza-linea);
+}
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--plaza-tinta);
+}
+.navbar-brand:hover { color: var(--bs-primary); }
+.nav-link {
+  font-weight: 500;
+  padding-inline: 1rem !important;
+}
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .navbar-nav .nav-item + .nav-item::before {
+    content: "|";
+    color: #c9b8b0;
+  }
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--bs-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.45rem;
+  text-decoration-thickness: 2px;
+}
+ 
+/* Bienvenida */
+.hero {
+  background: var(--plaza-suave);
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+.hero .lead {
+  max-width: 36ch;
+  font-size: 1.2rem;
+}
+.carousel {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -22px rgba(43, 26, 30, 0.45);
+}
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+ 
+/* Bloques de presentación: cajitas que se levantan al pasar el cursor */
+.valor {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.valor:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 36px -18px rgba(43, 26, 30, 0.45);
+}
+.valor p {
+  max-width: 34ch;
+}
+@media (prefers-reduced-motion: reduce) {
+  .valor { transition: none; }
+  .valor:hover { transform: none; }
+}
+ 
+/* Catálogo: el título empieza donde empiezan las tarjetas (3/12 de la fila, con el gutter g-4) */
+@media (min-width: 992px) {
+  .titulo-catalogo {
+    margin-left: calc((100% + 1.5rem) * 0.25);
+  }
+}
+ 
+.puesto-img {
+  height: 11rem;
+  object-fit: cover;
+  background: #f7e8d0;
+}
+.card {
+  --bs-card-border-color: var(--plaza-linea);
+  --bs-card-bg: #fffdfb;
+  --bs-card-border-radius: 0.75rem;
+  --bs-card-inner-border-radius: 0.75rem;
+  overflow: hidden;
+}
+.caja-categorias {
+  background: #fffdfb;
+  border: 1px solid var(--plaza-linea);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.caja-categorias-titulo {
+  background: var(--plaza-suave);
+  border-bottom: 1px solid var(--plaza-linea);
+  padding: 0.9rem 1rem;
+}
+.list-group {
+  --bs-list-group-border-color: var(--plaza-linea);
+  --bs-list-group-bg: #fffdfb;
+  --bs-list-group-action-hover-bg: var(--plaza-suave);
+  --bs-list-group-border-radius: 0.75rem;
+}
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--plaza-linea);
+  --bs-table-striped-bg: #f3ece8;
+}
+.table td {
+  padding: 0.75rem;
+}
+.table thead th {
+  font-family: var(--fuente-titulos);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+ 
+/* Formulario y preguntas */
+.tarjeta-formulario {
+  box-shadow: 0 12px 32px -20px rgba(43, 26, 30, 0.45);
+}
+.tarjeta-formulario .form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.form-control,
+.form-select {
+  --bs-border-color: #d9cbc4;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(138, 35, 66, 0.15);
+}
+.form-control::placeholder {
+  color: #9a8a88;
+}
+.accordion {
+  --bs-accordion-border-color: var(--plaza-linea);
+  --bs-accordion-active-bg: var(--plaza-suave);
+  --bs-accordion-active-color: var(--plaza-tinta);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(138, 35, 66, 0.2);
+}
+ 
+/* Pie de página */
+.pie {
+  background: var(--plaza-tinta);
+  color: #eadfd8;
+  margin-top: 4rem;
+  text-align: center;
+}
+.pie p {
+  font-family: var(--bs-body-font-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.pie a {
+  color: #f2b8c6;
+  text-underline-offset: 0.25rem;
+}
+.pie a:hover {
+  color: #fff;
+}
+ 
+/* Foco visible para teclado */
+:focus-visible {
+  outline: 3px solid var(--plaza-acento);
+  outline-offset: 2px;
+}

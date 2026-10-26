@@ -28,3 +28,157 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sabores de la Plaza · Nuestros puestos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sabores de la Plaza</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir el menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Nuestros puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <main class="container py-5">
+    <h1 class="titulo-catalogo mb-4">Nuestros puestos</h1>
+    <div class="row g-4">
+      <aside class="col-lg-3">
+        <div class="caja-categorias">
+          <div class="caja-categorias-titulo">
+            <h2 class="h5 mb-0">Categorías</h2>
+          </div>
+          <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action" href="#frutas">Frutas</a>
+            <a class="list-group-item list-group-item-action" href="#panaderia">Panadería</a>
+            <a class="list-group-item list-group-item-action" href="#almuerzos">Almuerzos</a>
+            <a class="list-group-item list-group-item-action" href="#jugos">Jugos</a>
+            <a class="list-group-item list-group-item-action" href="#cafe">Café</a>
+          </div>
+        </div>
+      </aside>
+ 
+      <section class="col-lg-9">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-xl-4" id="frutas">
+            <div class="card h-100">
+              <img src="img/frutas.svg" class="card-img-top puesto-img" alt="Frutas frescas">
+              <div class="card-body">
+                <span class="badge text-bg-warning mb-2">Popular</span>
+                <h3 class="card-title h5">Frutas</h3>
+                <p class="card-text">Mango, mora, lulo y banano del día, directo de la finca.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a class="btn btn-primary" href="contacto.html">Hacer un pedido</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4" id="panaderia">
+            <div class="card h-100">
+              <img src="img/pan.svg" class="card-img-top puesto-img" alt="Pan recién horneado">
+              <div class="card-body">
+                <span class="badge text-bg-success mb-2">Nuevo</span>
+                <h3 class="card-title h5">Panadería</h3>
+                <p class="card-text">Pan de yuca, almojábanas y pan de bono horneados cada mañana.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a class="btn btn-primary" href="contacto.html">Hacer un pedido</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4" id="almuerzos">
+            <div class="card h-100">
+              <img src="img/almuerzos.svg" class="card-img-top puesto-img" alt="Plato de almuerzo casero">
+              <div class="card-body">
+                <span class="badge text-bg-warning mb-2">Popular</span>
+                <h3 class="card-title h5">Almuerzos</h3>
+                <p class="card-text">Menú casero con sopa, seco y jugo, que cambia todos los días.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a class="btn btn-primary" href="contacto.html">Hacer un pedido</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4" id="jugos">
+            <div class="card h-100">
+              <img src="img/frutas.svg" class="card-img-top puesto-img" alt="Frutas para jugos naturales">
+              <div class="card-body">
+                <span class="badge text-bg-secondary mb-2">Sin conservantes</span>
+                <h3 class="card-title h5">Jugos</h3>
+                <p class="card-text">Jugos naturales exprimidos al momento, en agua o en leche.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a class="btn btn-primary" href="contacto.html">Hacer un pedido</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4" id="cafe">
+            <div class="card h-100">
+              <img src="img/cafe.svg" class="card-img-top puesto-img" alt="Taza de café">
+              <div class="card-body">
+                <span class="badge text-bg-secondary mb-2">Sin conservantes</span>
+                <h3 class="card-title h5">Café</h3>
+                <p class="card-text">Café colombiano molido al momento, tinto, perico o con leche.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a class="btn btn-primary" href="contacto.html">Hacer un pedido</a>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Precios de referencia</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Disponibilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Frutas de temporada</td><td>Frutas y verduras</td><td>$5.000</td><td><span class="badge text-bg-success">Disponible</span></td></tr>
+            <tr><td>Pan artesanal</td><td>Panadería</td><td>$3.000</td><td><span class="badge text-bg-success">Disponible</span></td></tr>
+            <tr><td>Almuerzo del día</td><td>Almuerzos</td><td>$14.000</td><td><span class="badge text-bg-success">Disponible</span></td></tr>
+            <tr><td>Jugo natural</td><td>Jugos</td><td>$5.500</td><td><span class="badge text-bg-secondary">Consultar</span></td></tr>
+            <tr><td>Café colombiano</td><td>Café y bebidas</td><td>$4.000</td><td><span class="badge text-bg-secondary">Consultar</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+      </section>
+    </div>
+ 
+  </main>
+ 
+  <footer class="pie py-4">
+    <div class="container">
+      <p class="mb-1">Colectivo de puestos de la plaza de mercado.</p>
+      <p class="mb-1">© 2026 Sabores de la Plaza.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
