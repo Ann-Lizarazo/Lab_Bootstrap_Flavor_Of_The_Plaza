@@ -59,7 +59,6 @@ La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
 
-/* Paleta: vino mora (principal), rosa polvo (superficies), tinta de café (texto) */
 :root {
   --bs-primary: #8a2342;
   --bs-primary-rgb: 138, 35, 66;
@@ -109,6 +108,15 @@ h3, .h4 { font-size: 1.5rem; }
   font-weight: 800;
   color: var(--plaza-tinta);
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.navbar-brand .logo {
+  color: var(--bs-primary);
+  flex-shrink: 0;
+}
 .navbar-brand:hover { color: var(--bs-primary); }
 .nav-link {
   font-weight: 500;
@@ -144,6 +152,7 @@ h3, .h4 { font-size: 1.5rem; }
 .hero .lead {
   max-width: 36ch;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 .carousel {
   border-radius: 1rem;
@@ -157,15 +166,23 @@ h3, .h4 { font-size: 1.5rem; }
 }
  
 /* Bloques de presentación: cajitas que se levantan al pasar el cursor */
-.valor {
+.card.valor {
+  --bs-card-border-width: 2px;
+  --bs-card-border-color: #d6c2b8;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .valor:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 36px -18px rgba(43, 26, 30, 0.45);
 }
+.icono-valor {
+  display: flex;
+  justify-content: center;
+  color: var(--bs-primary);
+}
 .valor p {
   max-width: 34ch;
+  margin-inline: auto;
 }
 @media (prefers-reduced-motion: reduce) {
   .valor { transition: none; }
